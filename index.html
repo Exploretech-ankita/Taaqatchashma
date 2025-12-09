@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Keep your style.css for basic styling -->
+    <link rel="stylesheet" href="style.css"> 
+    
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel for Illustration -->
+        <div class="illustration-panel">
+            <!-- This is where your illustration or a placeholder image would go -->
+            <!-- Note: You need a 'logo.png' in the same directory for this to show -->
+            <img src="logo.png" alt="Login Illustration">
+        </div>
+        
+        <!-- Right Panel for the Form -->
+        <div class="form-panel">
+            <h1>Welcome!</h1>
+            <p>Create your Account</p>
+            
+            <!-- Form with all required fields -->
+            <form action="#" method="POST" id="registrationForm">
+                <!-- Name -->
+                 <br>
+                <input type="text" id="name" placeholder="Name" required style="margin-bottom: 5px;">
+                <!-- Email ID -->
+                 <br>
+                <input type="email" id="email" placeholder="Email ID*" required style="margin-bottom: 5px;">
+                <!-- Phone No. -->
+                 <br>
+                <input type="tel" id="phone" placeholder="Phone No.*" required style="margin-bottom: 5px;">
+                <!-- Company Name (Optional) -->
+                 <br>
+                <input type="text" id="company" placeholder="Company Name (Optional)">
+                <br>
+                <br>
+                <div class="buttons">
+                    <!-- Changed Sign In button to Submit -->
+                    <button type="submit" class="sign-in">SIGN IN</button>
+                    <!-- Sign up button removed as this is now a registration form -->
+                </div>
+            </form>
+            
+            <div class="social-login">
+                <p>OR SIGN UP WITH</p>
+                <!-- Google Sign-In Button Container -->
+                <div class="icons">
+                    <!-- Replace the placeholder <span> with the Google GSI button -->
+                    <!-- *** IMPORTANT: Replace "YOUR_GOOGLE_CLIENT_ID" with your actual ID *** -->
+                    <div id="g_id_onload"
+                         data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                         data-callback="handleCredentialResponse">
+                    </div>
+                    <div class="g_id_signin" 
+                         data-type="standard" 
+                         data-size="large" 
+                         data-theme="outline" 
+                         data-text="sign_up_with" 
+                         data-shape="rectangular" 
+                         data-logo_alignment="left">
+                    </div>
+                    
+                    <!-- Other social media icons if you want to add them back -->
+                    <!-- <span>f</span> -->
+                    <!-- <span>in</span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include a script file for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>
