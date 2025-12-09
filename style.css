@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    /* 1. Set the background image, ensure it covers the whole screen, and center it */
+    background-image: url('background.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Fallback color if image doesn't load */
+    background-color: #e0f2fe; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    /* 2. Add a slight background color with transparency so the background image shows through */
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Adjust as needed */
+    max-width: 900px;
+    /* Optional: Add some padding within the container */
+    padding: 20px; 
+}
+
+.illustration-panel {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration-panel img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-panel {
+    flex: 1;
+    padding: 40px;
+    /* Ensure text in the form panel is readable against the white/transparent background */
+    color: #333; 
+}
+
+/* Add specific styles for form inputs, buttons using your indigo and orange theme colors here */
